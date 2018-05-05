@@ -2,32 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_margin="@dimen/small_marg">
 
     <TextView
         android:id="@+id/tv_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="author"/>
+        android:text="author"
+        android:background="@color/colorAuthor"
+        android:layout_marginLeft="@dimen/small_marg"/>
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:text="title"/>
+        android:text="title"
+        android:background="@color/colorTitle"
+        android:layout_marginLeft="@dimen/small_marg"
+       />
 
     <TextView
         android:id="@+id/tv_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="year"/>
+        android:text="year"
+        android:background="@color/colorYear"
+        android:layout_marginLeft="@dimen/small_marg"/>
 
     <TextView
         android:id="@+id/tv_keywords"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="keywords"/>
+        android:text="keywords"
+        android:background="@color/colorKeywords"
+        android:layout_marginLeft="@dimen/small_marg"/>
 
 
 </LinearLayout>
