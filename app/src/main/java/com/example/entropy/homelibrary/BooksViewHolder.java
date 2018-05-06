@@ -13,7 +13,7 @@ class BooksViewHolder extends RecyclerView.ViewHolder {
     TextView mAuthor;
     TextView mYear;
     TextView mKeywords;
-    Button deleteButton;
+    Button moreButton;
 
     public BooksViewHolder(View itemView) {
         super(itemView);
@@ -22,7 +22,7 @@ class BooksViewHolder extends RecyclerView.ViewHolder {
         mAuthor= (TextView) itemView.findViewById(R.id.tv_author);
         mYear=(TextView) itemView.findViewById(R.id.tv_year);
         mKeywords= (TextView)itemView.findViewById(R.id.tv_keywords);
-        deleteButton=(Button)itemView.findViewById(R.id.delete_button);
+       moreButton=(Button)itemView.findViewById(R.id.more_button);
 
     }
 }

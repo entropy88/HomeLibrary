@@ -1,5 +1,7 @@
 package com.example.entropy.homelibrary;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +25,7 @@ class BooksAdapter extends RecyclerView.Adapter<BooksViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(BooksViewHolder holder, int position) {
+    public void onBindViewHolder(final BooksViewHolder holder, int position) {
 
         final BookObject item=data.get(position);
         holder.mId.setText(String.valueOf(item.getId()));
@@ -32,14 +34,12 @@ class BooksAdapter extends RecyclerView.Adapter<BooksViewHolder> {
         holder.mYear.setText(item.getYear());
         holder.mKeywords.setText(item.getKeywords());
 
-        //delete book. must move it to another screen
-        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+        holder.moreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int thisId=item.getId();
-                HomeActivity.booksDatabase.booksDao().deleteBook(thisId);
-
-
+                Intent intent= new Intent (view.getContext(),SingleBookActvity.class);
+                intent.putExtra ("id",item.getId());
+                view.getContext().startActivity(intent);
             }
         });
     }
