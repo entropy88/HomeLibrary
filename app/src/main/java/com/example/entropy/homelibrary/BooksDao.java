@@ -14,8 +14,11 @@ public interface BooksDao {
 
     @Query("select * from books")
     public List<BookObject> getBooks();
+//fix this
+    @Query("select* from books where author ==:userQuery")
+    public List <BookObject> searchBooks(String userQuery);
 
-    @Query("select* from books where author==:userQuery OR title==:userQuery")
-    BookObject findBookByTitleOrAuthor(String userQuery);
+    @Query ("delete  from books where id ==:thisId")
+    void deleteBook(int thisId);
 
 }

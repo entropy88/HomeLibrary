@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -17,18 +18,21 @@ import java.util.List;
 public class AllBooksActivity extends AppCompatActivity {
 RecyclerView recyclerView;
 ImageButton popupMenuBtn;
+public static TextView myBooksToolbarTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_books);
-
+        myBooksToolbarTv=(TextView)findViewById(R.id.tv_myBooks) ;
         recyclerView=(RecyclerView) findViewById(R.id.rec_allBooks);
         recyclerView.setLayoutManager(new LinearLayoutManager(AllBooksActivity.this));
         List<BookObject> booksList = HomeActivity.booksDatabase.booksDao().getBooks();
         BooksAdapter adapter= new BooksAdapter(booksList);
         recyclerView.setAdapter(adapter);
-
+        //get books count
+        myBooksToolbarTv.append(": "+ String.valueOf(booksList.size()));
+        //set up navigation
         popupMenuBtn= (ImageButton) findViewById(R.id.img_btn_pop);
         popupMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override

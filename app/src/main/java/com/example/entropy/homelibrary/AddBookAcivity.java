@@ -83,6 +83,8 @@ public class AddBookAcivity extends AppCompatActivity {
                 book.setTitle(title);
                 book.setYear(year);
                 book.setKeywords(keywords);
+                book.setId(0);
+
 
 
                 HomeActivity.booksDatabase.booksDao().addBook(book);

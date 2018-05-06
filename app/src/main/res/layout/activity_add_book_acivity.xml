@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:elevation="@dimen/small_marg"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimaryDark">
 
 
         <LinearLayout
@@ -23,6 +23,8 @@
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
                 android:text="@string/add_book"
                 />
             <ImageButton

@@ -3,6 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/small_marg">
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="author"
+        android:background="@color/colorAuthor"
+        android:layout_marginLeft="@dimen/small_marg"/>
 
     <TextView
         android:id="@+id/tv_author"
@@ -37,6 +44,11 @@
         android:text="keywords"
         android:background="@color/colorKeywords"
         android:layout_marginLeft="@dimen/small_marg"/>
-
+<Button
+    android:id="@+id/delete_button"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="delete"
+  />
 
 </LinearLayout>
