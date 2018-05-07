@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".AddBookAcivity">
 
     <android.support.v7.widget.Toolbar
@@ -26,12 +27,14 @@
                 android:textSize="24sp"
                 android:layout_gravity="center_vertical"
                 android:text="@string/add_book"
+                android:textColor="@android:color/white"
                 />
             <ImageButton
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="@dimen/small_marg"
-                android:src="@mipmap/ic_launcher"
+                android:background="@color/colorPrimary"
+                android:src="@mipmap/ic_local_library_white_24dp"
                 android:id="@+id/img_btn_pop"/>
         </LinearLayout>
 
@@ -92,5 +95,6 @@
         android:id="@+id/btn_addBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="добави книга"/>
+        android:text="добави книга"
+        style="@style/button_style"/>
 </LinearLayout>

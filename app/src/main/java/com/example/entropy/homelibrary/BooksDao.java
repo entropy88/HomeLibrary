@@ -16,7 +16,7 @@ public interface BooksDao {
     public List<BookObject> getBooks();
 
 //fix this
-    @Query("select* from books where author ==:userQuery")
+    @Query("select * from books where  title LIKE '%' || :userQuery  || '%' ")
     public List <BookObject> searchBooks(String userQuery);
 
     @Query ("delete  from books where id ==:thisId")
@@ -24,4 +24,7 @@ public interface BooksDao {
 
     @Query ("select * from books where id ==:selectedId")
     BookObject selectBook (int selectedId);
+
+    @Query("UPDATE books SET author = :authorStr, title= :titleStr, year= :yearStr, keywords =:keywordsStr WHERE id =:thisId")
+    void update(String authorStr, String titleStr, String yearStr, String keywordsStr, int thisId);
 }

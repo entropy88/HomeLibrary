@@ -5,22 +5,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/small_marg"
     tools:context=".SingleBookActvity">
-    <TextView
-        android:id="@+id/tv_book_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="book info"/>
 
-    <Button
-        android:id="@+id/btn_delete"
+    <TextView
+        android:id="@+id/tv_book_auth"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="delete"/>
+        android:background="@color/colorAuthor"
+        android:text="Автор: "/>
+
+    <TextView
+        android:id="@+id/tv_book_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTitle"
+        android:text="title"/>
+
+    <TextView
+        android:id="@+id/tv_book_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorYear"
+        android:text="year"/>
+
+    <TextView
+        android:id="@+id/tv_book_keywords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorKeywords"
+        android:text="keywords"/>
 
     <Button
         android:id="@+id/btn_backToAllBooks"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Обратно към книгите"/>
+        android:text="Обратно към книгите"
+        style="@style/button_style"/>
+    <Button
+        android:id="@+id/btn_enableUpdating"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/button_style"
+        android:text="Редактирай"/>
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/button_style"
+        android:text="Изтрий"/>
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Име на автора"/>
+
+    <EditText
+        android:id="@+id/edt_author"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:enabled="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Заглавие"/>
+
+    <EditText
+        android:id="@+id/edt_title"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:enabled="false"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Година на издаване"/>
+
+    <EditText
+        android:id="@+id/edt_year"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:enabled="false"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Ключови думи"/>
+
+    <EditText
+        android:id="@+id/edt_keywords"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:enabled="false"/>
+    <Button
+        android:id="@+id/btn_updateRecord"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Запази промените"
+        style="@style/button_style"
+        android:enabled="false"/>
+
 </LinearLayout>

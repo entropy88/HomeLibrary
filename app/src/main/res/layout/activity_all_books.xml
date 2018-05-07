@@ -27,19 +27,22 @@
                 android:layout_weight="1"
                 android:textSize="24sp"
                 android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
                 android:text="@string/my_books"
                 />
             <ImageButton
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="@dimen/small_marg"
-                android:src="@mipmap/ic_launcher"
+                android:background="@color/colorPrimary"
+                android:src="@mipmap/ic_local_library_white_24dp"
                 android:id="@+id/img_btn_pop"/>
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
+        android:layout_margin="@dimen/small_marg"
     android:layout_weight="1"
     android:layout_width="match_parent"
     android:layout_height="0dp"

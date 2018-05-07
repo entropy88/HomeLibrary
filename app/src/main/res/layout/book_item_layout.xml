@@ -7,7 +7,7 @@
         android:id="@+id/tv_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="author"
+        android:text="id"
         android:background="@color/colorAuthor"
         android:layout_marginLeft="@dimen/small_marg"/>
 
@@ -48,7 +48,9 @@
     android:id="@+id/more_button"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:text="more"
+    android:text="Повече"
+    android:layout_gravity="right"
+    style="@style/button_style"
   />
 
 </LinearLayout>

@@ -26,18 +26,21 @@
                android:text="@string/search_book"
                android:textSize="24sp"
                android:layout_gravity="center_vertical"
+               android:textColor="@android:color/white"
                />
             <ImageButton
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="@dimen/small_marg"
-                android:src="@mipmap/ic_launcher"
+                android:background="@color/colorPrimary"
+                android:src="@mipmap/ic_local_library_white_24dp"
                 android:id="@+id/img_btn_pop"/>
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
+        android:layout_margin="@dimen/small_marg"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal">
@@ -51,13 +54,15 @@
         android:id="@+id/btn_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="търси"/>
 
     </LinearLayout>
     <ScrollView
+        android:layout_margin="@dimen/small_marg"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_width="wrap_content">
+        android:layout_width="match_parent">
 
 <android.support.v7.widget.RecyclerView
     android:id="@+id/rec_results"
