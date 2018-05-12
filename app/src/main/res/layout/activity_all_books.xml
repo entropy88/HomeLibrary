@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
     tools:context=".AllBooksActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:elevation="@dimen/small_marg"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimary">
 
 
         <LinearLayout
@@ -42,7 +41,6 @@
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
-        android:layout_margin="@dimen/small_marg"
     android:layout_weight="1"
     android:layout_width="match_parent"
     android:layout_height="0dp"

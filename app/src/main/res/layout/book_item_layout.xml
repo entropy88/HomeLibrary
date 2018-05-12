@@ -3,15 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/small_marg">
-    <TextView
-        android:id="@+id/tv_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="id"
-        android:background="@color/colorAuthor"
-        android:layout_marginLeft="@dimen/small_marg"/>
+
 
     <TextView
+        android:paddingLeft="@dimen/small_marg"
         android:id="@+id/tv_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +14,7 @@
         android:background="@color/colorAuthor"
         android:layout_marginLeft="@dimen/small_marg"/>
     <TextView
+        android:paddingLeft="@dimen/small_marg"
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,6 +26,7 @@
        />
 
     <TextView
+        android:paddingLeft="@dimen/small_marg"
         android:id="@+id/tv_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,6 +35,7 @@
         android:layout_marginLeft="@dimen/small_marg"/>
 
     <TextView
+        android:paddingLeft="@dimen/small_marg"
         android:id="@+id/tv_keywords"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

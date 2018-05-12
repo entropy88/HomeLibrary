@@ -8,7 +8,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 class BooksViewHolder extends RecyclerView.ViewHolder {
-    TextView mId;
+
     TextView mTitle;
     TextView mAuthor;
     TextView mYear;
@@ -17,7 +17,7 @@ class BooksViewHolder extends RecyclerView.ViewHolder {
 
     public BooksViewHolder(View itemView) {
         super(itemView);
-        mId= (TextView) itemView.findViewById(R.id.tv_id);
+
         mTitle= (TextView)itemView.findViewById(R.id.tv_title);
         mAuthor= (TextView) itemView.findViewById(R.id.tv_author);
         mYear=(TextView) itemView.findViewById(R.id.tv_year);

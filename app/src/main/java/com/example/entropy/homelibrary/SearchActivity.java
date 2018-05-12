@@ -63,17 +63,17 @@ public class SearchActivity extends AppCompatActivity {
 
             }
         });
-        final String userQuery= edtSearch.getText().toString();
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                HomeActivity.booksDatabase.booksDao().searchBooks(userQuery);
-//                Toast.makeText(SearchActivity.this, "looks like it's working", Toast.LENGTH_SHORT).show();
-                recResults.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
-                List<BookObject> booksList = HomeActivity.booksDatabase.booksDao().searchBooks(userQuery);
-                BooksAdapter adapter= new BooksAdapter(booksList);
-                recResults.setAdapter(adapter);
-            }
-        });
+        final String userQuery= "%"+edtSearch.getText().toString()+"%";
+//        btnSearch.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+////                Toast.makeText(SearchActivity.this, "looks like it's working", Toast.LENGTH_SHORT).show();
+//                recResults.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
+//                List<BookObject> booksList = HomeActivity.booksDatabase.booksDao().searchBooks(userQuery);
+//                BooksAdapter adapter= new BooksAdapter(booksList);
+//                recResults.setAdapter(adapter);
+//            }
+//        });
     }
 }

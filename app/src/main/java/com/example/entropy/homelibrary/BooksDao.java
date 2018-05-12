@@ -16,8 +16,8 @@ public interface BooksDao {
     public List<BookObject> getBooks();
 
 //fix this
-    @Query("select * from books where  title LIKE '%' || :userQuery  || '%' ")
-    public List <BookObject> searchBooks(String userQuery);
+//    @Query("select * from books  WHERE title LIKE 'userQuery' OR author LIKE 'userQuery' OR keywords LIKE 'userQuery' OR year LIKE 'userQuery' ")
+//    public List <BookObject> searchBooks(String userQuery);
 
     @Query ("delete  from books where id ==:thisId")
     void deleteBook(int thisId);

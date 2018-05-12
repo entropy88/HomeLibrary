@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:elevation="@dimen/small_marg"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimary">
 
 
         <LinearLayout
@@ -74,6 +74,7 @@
 
     <EditText
         android:id="@+id/edt_year"
+        android:inputType="number"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="16sp"/>

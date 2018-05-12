@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2cd407</color>
-    <color name="colorPrimaryDark">#06bc21</color>
-    <color name="colorAccent">#038307</color>
-    <color name="colorAuthor">#06bc21</color>
-    <color name="colorTitle">#2cd407</color>
-    <color name="colorYear">#1be408</color>
-    <color name="colorKeywords">#05ff09</color>
+    <color name="colorPrimary">#00695c</color>
+    <color name="colorPrimaryDark">#004d40</color>
+    <color name="colorAccent">#00695c</color>
+    <color name="colorAuthor">#00796b</color>
+    <color name="colorTitle">#00897b</color>
+    <color name="colorYear">#009688</color>
+    <color name="colorKeywords">#26a69a</color>
 </resources>

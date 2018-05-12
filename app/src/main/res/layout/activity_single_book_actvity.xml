@@ -5,10 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="@dimen/small_marg"
     tools:context=".SingleBookActvity">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/small_marg">
+
+
+        <LinearLayout
+           android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+      <ImageButton
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:id="@+id/btn_back"
+          android:src="@mipmap/baseline_arrow_back_white_36"
+          android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
     <TextView
+        android:padding="@dimen/small_marg"
         android:id="@+id/tv_book_auth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +38,7 @@
         android:text="Автор: "/>
 
     <TextView
+        android:padding="@dimen/small_marg"
         android:id="@+id/tv_book_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +46,7 @@
         android:text="title"/>
 
     <TextView
+        android:padding="@dimen/small_marg"
         android:id="@+id/tv_book_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,94 +54,113 @@
         android:text="year"/>
 
     <TextView
+        android:padding="@dimen/small_marg"
         android:id="@+id/tv_book_keywords"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorKeywords"
         android:text="keywords"/>
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <Button
-        android:id="@+id/btn_backToAllBooks"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Обратно към книгите"
-        style="@style/button_style"/>
-    <Button
-        android:id="@+id/btn_enableUpdating"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        style="@style/button_style"
-        android:text="Редактирай"/>
-    <Button
+        android:layout_alignParentRight="true"
         android:id="@+id/btn_delete"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         style="@style/button_style"
         android:text="Изтрий"/>
+    <Button
+        android:layout_marginRight="@dimen/small_marg"
+        android:layout_toLeftOf="@+id/btn_delete"
+        android:id="@+id/btn_enableUpdating"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/button_style"
+        android:text="Редактирай"/>
+
+
+</RelativeLayout>
 
 
 
 
 
     <TextView
+        android:id="@+id/author_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:text="Име на автора"/>
+        android:text="Име на автора"
+        android:visibility="invisible"/>
 
     <EditText
         android:id="@+id/edt_author"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="16sp"
+        android:visibility="invisible"
         android:enabled="false"/>
 
     <TextView
+        android:id="@+id/title_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:text="Заглавие"/>
+        android:text="Заглавие"
+        android:visibility="invisible"/>
 
     <EditText
         android:id="@+id/edt_title"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="16sp"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:visibility="invisible"/>
 
 
     <TextView
+        android:id="@+id/year_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:text="Година на издаване"/>
+        android:text="Година на издаване"
+        android:visibility="invisible"/>
 
     <EditText
         android:id="@+id/edt_year"
+        android:inputType="number"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="16sp"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:visibility="invisible"/>
 
 
     <TextView
+        android:id="@+id/keywords_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:text="Ключови думи"/>
+        android:text="Ключови думи"
+        android:visibility="invisible"/>
 
     <EditText
         android:id="@+id/edt_keywords"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="16sp"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:visibility="invisible"/>
     <Button
         android:id="@+id/btn_updateRecord"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="Запази промените"
+        android:layout_gravity="right"
         style="@style/button_style"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:visibility="invisible"/>
 
 </LinearLayout>
